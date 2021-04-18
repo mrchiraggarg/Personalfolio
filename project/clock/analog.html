@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <title>Analog Clock</title>
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #48cae4;
+      }
+      .clock {
+        width: 350px;
+        height: 350px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        background-image: url(clock.png);
+        background-size: cover;
+        border-radius: 50%;
+        border: 20px solid #fff;
+        box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.1),
+          0 20px 20px rgba(0, 0, 0, 0.2), 0 0 0 4px rgba(255, 255, 255, 1);
+      }
+      .clock::before {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background: #000;
+        border: 2px solid #fff;
+        z-index: 100000;
+        border-radius: 50%;
+      }
+      .hours,
+      .minutes,
+      .seconds {
+        position: absolute;
+      }
+      .hours,
+      .hr {
+        width: 160px;
+        height: 160px;
+      }
+      .minutes,
+      .mn {
+        width: 190px;
+        height: 190px;
+      }
+      .seconds,
+      .sc {
+        width: 230px;
+        height: 230px;
+      }
+      .hr,
+      .mn,
+      .sc {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        border-radius: 50%;
+      }
+      .hr::before {
+        content: "";
+        position: absolute;
+        width: 8px;
+        height: 80px;
+        background: #023e8a;
+        z-index: 10;
+        border-radius: 6px 6px 0 0;
+      }
+      .mn::before {
+        content: "";
+        position: absolute;
+        width: 4px;
+        height: 90px;
+        background: #48cae4;
+        z-index: 100;
+        border-radius: 6px 6px 0 0;
+      }
+      .sc::before {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 150px;
+        background: #0096c7;
+        z-index: 1000;
+        border-radius: 6px 6px 0 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clock">
+      <div class="hours">
+        <div class="hr" id="hr"></div>
+      </div>
+      <div class="minutes">
+        <div class="mn" id="mn"></div>
+      </div>
+      <div class="seconds">
+        <div class="sc" id="sc"></div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+
+    <script type="text/javascript">
+      const deg = 6;
+      const hr = document.querySelector("#hr");
+      const mn = document.querySelector("#mn");
+      const sc = document.querySelector("#sc");
+      setInterval(() => {
+        let day = new Date();
+        let hh = day.getHours() * 30;
+        let mm = day.getMinutes() * deg;
+        let ss = day.getSeconds() * deg;
+        hr.style.transform = `rotateZ(${hh + mm / 12}deg)`;
+        mn.style.transform = `rotateZ(${mm}deg)`;
+        sc.style.transform = `rotateZ(${ss}deg)`;
+      });
+    </script>
+  </body>
+</html>

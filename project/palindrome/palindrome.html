@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <title>Palindrome Checker</title>
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+      .result {
+        margin: 0;
+        padding: 10px;
+        text-align: center;
+      }
+      .result:nth-child(odd) {
+        background-color: #3e98fd;
+        font-weight: bold;
+        color: #fff;
+      }
+      .result:nth-child(even) {
+        background-color: #9ef810;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="input-group w-50 mt-3">
+      <input
+        type="text"
+        name="quiz"
+        id="quiz"
+        class="form-control"
+        placeholder="Enter Something..."
+      />
+      <button id="MyBtn" onclick="checkIt()" class="btn btn-primary">
+        Check
+      </button>
+    </div>
+    <!-- Result Area -->
+    <div id="list" class="w-50 mt-3">
+      <p class="result">Results</p>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+
+    <script type="text/javascript">
+      function checkIt() {
+        let word = document.getElementById("quiz").value; //Get input Value
+        let firstr = word.replace(/[\W_]/g, "").toLowerCase();
+        let secstr = firstr.split("").reverse().join("");
+        // console.log(secstr);
+        if (secstr == firstr) {
+          let result = document.createElement("p"); //creating new element.
+          result.className = "result"; //add class in p tag.
+          result.innerHTML = secstr + " " + "is a palindrome!"; //set secstr value in list.
+          document.getElementById("list").appendChild(result); //make a child to list div.
+        } else {
+          let result = document.createElement("p"); //creating new element.
+          result.className = "result"; //add class in p tag.
+          result.innerHTML = secstr + " " + "not a palindrome!"; //set secstr value in list.
+          document.getElementById("list").appendChild(result); //make a child to list div.
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Lato', sans-serif;
+}
+body, html {	
+	background: #FFD6D6;
+}
+#nav-bar {
+	background: #F5F5F5;
+	box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
+}
+#nav-link {
+	color: #FF4747;
+	font-size: 1.2rem;
+	font-weight: bolder;
+}
+#nav-link:hover {
+	color: #F5F5F5;
+	background: #FF4747;
+	border-radius: 10px;
+	font-size: 1.5rem;
+	font-weight: bolder;
+}
+.display-4 {
+	color: #fff;
+}
+#getcont {
+	padding-top: 9rem;
+	padding-bottom: 3rem;
+	background: #FF7070;
+}
+#form {
+	font-weight: bolder;
+	text-align: center;
+	font-style: italic;
+	color: #F5F5F5;
+}
+#form input[type=email] {
+	text-align: center;
+	margin: auto;
+	border: 2px solid #000;
+}
+#touse {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
+#features {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	background: #FF7070;
+	color: #F5F5F5;
+}
+.features-cont {
+	width: 50%;
+	margin: auto;
+}
+#features i {
+	font-size: 3rem;
+}
+#pricing {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
+#pricing .card {
+	height: 100%;
+}
+table {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+td {
+	font-size: 1.1rem;
+	word-wrap: break-word;
+}
+footer {
+	text-align: center;;
+	background: #FF7070;
+	color: #F5F5F5;
+	padding: 2rem;
+	word-spacing: .3rem;
+	letter-spacing: .1rem;
+	word-wrap: break-word;
+}
+@media screen and (max-width: 425px) {	
+.features-cont {
+	width: 70%;
+	margin: auto;
+}
+}

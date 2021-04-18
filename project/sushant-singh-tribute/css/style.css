@@ -1,0 +1,100 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body, html {
+	padding: 0.5rem;
+	text-align: center;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+#title {
+	padding: 1rem;
+	font-size: 4rem;
+	font-weight: bolder;
+}
+#subtitle {
+	font-weight: bolder;
+	font-weight: 1.3rem;
+}
+figure {
+	background: #fff;
+	margin: 0.5rem;
+	padding: 0.5rem;
+}
+figcaption {
+	padding: 1rem;
+	font-weight: bolder;
+}
+h3 {
+	margin: 2rem;
+	font-weight: bolder;
+	font-size: 2rem;
+}
+p {
+	line-height: 2;
+}
+#main {
+	background: #eee;
+}
+ul {
+  max-width: 550px;
+  margin: 0 auto 50px auto;
+  text-align: left;
+  line-height: 2;
+}
+strong {
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+}
+#dialogue {
+	padding: 1.5rem;
+	max-width: 500px;
+	margin: auto;
+	font-style: italic;
+}
+h4 {
+	font-weight: bolder;
+	padding: 2rem;
+}
+#tribute-link {
+	font-weight: bolder;
+}
+@media screen and (max-width: 425px) {
+    #title {
+    	padding: 0.5rem;
+    	font-size: 2rem;
+    }
+    h3 {
+	    margin: 1rem;
+	    font-weight: bolder;
+	    font-size: 1.5rem;
+    }
+	ul {
+        max-width: 300px;
+        margin: auto;
+        text-align: left;
+        line-height: 2;
+    }
+    h4 {
+    	font-weight: bolder;
+    	font-size: 1.2rem;
+    	padding: 0.5rem;
+    }    
+}
+@media screen and (max-width: 375px) {
+	ul {
+        max-width: 250px;
+        margin: auto;
+        text-align: left;
+        line-height: 2;
+    }
+}
+@media screen and (max-width: 320px) {
+	ul {
+        max-width: 180px;
+        margin: auto;
+        text-align: left;
+        line-height: 2;
+    }
+}

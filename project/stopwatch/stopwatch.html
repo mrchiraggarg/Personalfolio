@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <title>Stopwatch</title>
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #fff;
+        background-color: #43aa8b;
+        font-family: "Pacifico", cursive;
+      }
+      .heading {
+        font-size: 2.5rem;
+      }
+      button {
+        border: none;
+        outline: none;
+        color: #43aa8b;
+        background-color: #fff;
+        padding: 1rem;
+      }
+      button:hover {
+        color: #fff;
+        background-color: #43aa8b;
+        border: #fff;
+        outline-style: dashed;
+        border-width: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="heading m-4">STOPWATCH</div>
+    <div class="h5 m-2">
+      <button class="m-1" onclick="start()">Start</button>
+      <button class="m-1" onclick="pause()">Pause</button>
+      <button class="m-1" onclick="end()">End</button>
+    </div>
+    <p class="h1 m-4">
+      <span class="stopwatch">00:00:00</span>
+    </p>
+    <ol class="laps"></ol>
+    <div class="h5 m-2">
+      <button class="m-1" onclick="restart()">Restart</button>
+      <button class="m-1" onclick="laps()">Laps</button>
+      <button class="m-1" onclick="remove()">Clear Laps</button>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+
+    <script type="text/javascript">
+      var ms = 0,
+        s = 0,
+        m = 0;
+      var timer;
+
+      var stopwatchEl = document.querySelector(".stopwatch");
+      var lapsContainer = document.querySelector(".laps");
+
+      function getTimer() {
+        return (
+          (m < 10 ? "0" + m : m) +
+          ":" +
+          (s < 10 ? "0" + s : s) +
+          ":" +
+          (ms < 10 ? "0" + ms : ms)
+        );
+      }
+
+      function pauseTimer() {
+        clearInterval(timer);
+        timer = false;
+      }
+
+      function start() {
+        if (!timer) {
+          timer = setInterval(run, 10);
+        }
+      }
+
+      function run() {
+        stopwatchEl.textContent = getTimer();
+        ms++;
+        if (ms == 100) {
+          ms = 0;
+          s++;
+        }
+        if (s == 60) {
+          s = 0;
+          m++;
+        }
+      }
+
+      function pause() {
+        pauseTimer();
+      }
+
+      function end() {
+        pauseTimer();
+        (m = 0), (s = 0), (ms = 0);
+        stopwatchEl.textContent = getTimer();
+        lapsContainer.innerHTML = "";
+      }
+
+      function restart() {
+        end();
+        start();
+      }
+
+      function laps() {
+        if (timer) {
+          var li = document.createElement("li");
+          li.innerText = getTimer();
+          lapsContainer.appendChild(li);
+        }
+      }
+
+      function remove() {
+        lapsContainer.innerHTML = "";
+        end();
+      }
+    </script>
+  </body>
+</html>

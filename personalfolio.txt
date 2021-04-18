@@ -1,0 +1,9 @@
+<!-- password of infinityfree -->
+password = a0s9d8f7g6h5j4k3l2(first second is zero and last second is el=L)
+
+<!-- server detail for php connection -->
+mysqli_connect('sql206.epizy.com','epiz_26392727','xzN9etGi9Y','epiz_26392727_website');
+
+
+    <!-- font awesome kit cdn link -->
+    <script src="https://kit.fontawesome.com/ad452c03cc.js" crossorigin="anonymous"></script>

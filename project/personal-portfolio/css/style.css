@@ -1,0 +1,157 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+.navbar-brand {
+	font-size: 2rem;
+}
+.nav-link {
+	font-size: 1.3rem;
+}
+#welcome-section div {
+	background: #c9cba3;
+	height: 80vh;
+	max-width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+#welcome-section div h1 {
+	font-weight: bolder;
+	font-size: 4rem;
+	letter-spacing: .3rem;
+}
+#welcome-section div h4 {
+	font-style: italic;
+}
+#projects {
+	background: #ffe1a8;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+}
+#projects .row {
+	margin-top: 3rem
+}
+#projects div h1 {
+	font-weight: bolder;
+	font-size: 3rem;
+	letter-spacing: .3rem;
+	text-align: center;
+}
+#projects figcaption {
+	text-align: left;
+	font-style: italic;
+	font-size: 1.2rem;
+	font-weight: bold;
+	padding-top: 1rem;
+	padding-left: 1rem;
+	padding-bottom: 1rem;
+	background: #eee;
+}
+#contact {
+	background: #e26d5c;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+}
+#contact div h1 {
+	font-weight: bolder;
+	font-size: 3rem;
+	letter-spacing: .3rem;
+	text-align: center;
+}
+#contact div p {
+	font-weight: bolder;
+	font-size: 5rem;
+	letter-spacing: .3rem;
+	text-align: center;
+	padding-top: 2rem;
+}
+#contact div h4 {
+	font-weight: bolder;
+	font-size: 2rem;
+	font-style: italic;
+	text-align: center;
+}
+i {
+	font-size: 6rem;
+	padding: 1rem;
+}
+#footer {
+	background: #472d30;
+	color: #fff;
+}
+@media screen and (max-width: 425px) {
+.navbar-brand {
+	font-size: 1.3rem;
+}
+#welcome-section div h1 {
+	font-size: 2.8rem;
+	letter-spacing: .2rem;
+}
+#welcome-section div h4 {
+	font-size: 1.3rem;
+	text-align: center;
+}
+#contact div p {
+	font-weight: bolder;
+	font-size: 3.5rem;
+	letter-spacing: .3rem;
+	text-align: center;
+	padding-top: 2rem;
+}
+#contact div h4 {
+	font-weight: bolder;
+	font-size: 1.5rem;
+	font-style: italic;
+	text-align: center;
+}
+i {
+	font-size: 5rem;
+	padding: 1rem;
+}
+}
+@media screen and (max-width: 300px) {
+.navbar-brand {
+	font-size: 1rem;
+}
+#welcome-section div h1 {
+	font-size: 2.3rem;
+	letter-spacing: .2rem;
+}
+#welcome-section div h4 {
+	font-size: 1.1rem;
+	text-align: center;
+}
+#projects div h1 {
+	font-weight: bolder;
+	font-size: 2rem;
+	letter-spacing: .2rem;
+	text-align: center;
+}
+#contact div h1 {
+	font-weight: bolder;
+	font-size: 2rem;
+	letter-spacing: .2rem;
+	text-align: center;
+}
+#contact div p {
+	font-weight: bolder;
+	font-size: 3rem;
+	letter-spacing: .2rem;
+	text-align: center;
+	padding-top: 2rem;
+}
+#contact div h4 {
+	font-weight: bolder;
+	font-size: 1.2rem;
+	font-style: italic;
+	text-align: center;
+}
+i {
+	font-size: 4rem;
+	padding: 1rem;
+}
+}

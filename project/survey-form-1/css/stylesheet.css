@@ -1,0 +1,37 @@
+* {
+	overflow-x: hidden;
+}
+body, html {
+	background: #2B2D42;
+	font-family: 'Raleway', sans-serif;
+}
+.mainheading {
+	background: #ffffff;
+	height: 3px;
+}
+.subheading {
+	background: #ffffff;
+}
+.mainbox {
+	border-color: #ffffff;
+	border-width: 5px;
+	border-style: solid;
+	padding: 10px;
+}
+.option {
+	width: 60%;
+	background-color: #9397e6;
+	color: #000000;
+
+}
+.option:hover {	
+	width: 65%;
+	background-color: #6610f2;
+	color: #ffffff;
+}
+.jumbotron {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}

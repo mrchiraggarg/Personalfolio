@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- Additional CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <main>
+      <header class="container">
+        <h1 id="title">personalfolio survey form</h1>
+        <p id="description">This survey For just collecting the details about our viewers.</p>
+      </header>
+      <section class="container" id="survey-section">
+        <form action="#" method="post" id="survey-form">
+          <div class="form-group">
+            <label id="name-label" for="name">Name</label>
+            <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group">
+            <label id="email-label" for="email">E-mail</label>
+            <input type="email" name="email" id="email" class="form-control" placeholder="Enter your E-mail" required>
+          </div>
+          <div class="form-group">
+            <label id="dob-label" for="dob">Date Of Birth</label>
+            <input type="date" name="dob" id="dob" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label id="number-label" for="age">Age (optional)</label>
+            <input type="number" name="age" id="age" class="form-control" min="10" max="70" placeholder="Enter your Age">
+          </div>
+          <div class="form-group">
+            <label id="image-label" for="image">Picture</label>
+            <input type="file" name="file" id="file" class="form-control">
+          </div>
+          <div class="form-group">
+            <label id="dropdown-label" for="role">What do are you doing these days?</label>
+            <select class="form-control" id="dropdown">
+              <option disabled selected value="">Select Suitable To You</option>
+              <option value="student">Student</option>
+              <option value="job">Full Time Job</option>
+              <option value="learner">Full Time Learner</option>
+              <option value="nottosay">Prefer Not To Say</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label id="recommend-label" for="user-recommend">Would you tell about Personalfolio to your friends?</label>
+            <div>
+              <label>
+                <input name="user-recommend" value="definitely" type="radio" class="input-radio" checked>Definitely
+              </label>
+            </div>
+            <div>
+              <label>
+                <input name="user-recommend" value="maybe" type="radio" class="input-radio">May Be
+              </label>
+            </div>
+            <div>
+              <label>
+                <input name="user-recommend" value="notsure" type="radio" class="input-radio">Not Sure
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label id="favorite-label" for="favorite-feature">
+              What is your favorite feature of Personalfolio?
+            </label>
+            <select id="favorite-feature" name="favoritefeature" class="form-control" required>
+              <option disabled selected value="">Select an option</option>
+              <option value="navigationbar">Navigation Bar</option>
+              <option value="landingview">Landing View</option>
+              <option value="about">About Section</option>
+              <option value="workingon">Working On Section</option>
+              <option value="portfolio">Portfolio Section</option>
+              <option value="contact">Contact Section</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label id="become-label" for="become">What would you want to become?</label>
+            <div>
+              <label>
+                <input name="prefer" value="front-end-developer" type="radio" class="input-checkbox">Front-end Developer
+              </label>
+            </div>
+            <div>
+              <label>
+                <input name="prefer" value="back-end-developer" type="radio" class="input-checkbox">Back-end Developer
+              </label>
+            </div>
+            <div>
+              <label>
+                <input name="prefer" value="full-stack-developer" type="radio" class="input-checkbox">Full Stack Developer
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label id="become-label" for="become">How many languages do you know yet? (Check all that apply)</label>
+            <div>
+              <label>
+                <input name="prefer" value="HTML" type="checkbox" class="input-checkbox">HTML
+              </label>
+            </div>
+            <div>
+              <label>
+                <input name="prefer" value="CSS" type="checkbox" class="input-checkbox">CSS
+              </label>
+            </div>
+            <div>
+              <label>
+                <input name="prefer" value="Javascript" type="checkbox" class="input-checkbox">Javascript
+              </label>
+            </div>
+            <div>
+              <label>
+                <input name="prefer" value="SaSS" type="checkbox" class="input-checkbox">SaSS
+              </label>
+            </div>
+            <div>
+              <label>
+                <input name="prefer" value="PHP" type="checkbox" class="input-checkbox">PHP
+              </label>
+            </div>
+            <div>
+              <label>
+                <input name="prefer" value="MySQL" type="checkbox" class="input-checkbox">MySQL
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label id="comment-label" for="comment">Any comments or suggestions?</label>
+            <div>
+              <textarea id="comments" class="form-control input-textarea" name="comment" rows="3" placeholder="Enter your comment here...">
+              </textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="formControlRange">Give us a Rate</label>
+            <input type="range" class="form-control-range" id="formControlRange" min="0" max="10"> 
+          </div>
+          <div class="form-group">
+            <button type="submit" id="submit" class="btn btn-success">Submit</button>
+          </div>
+          <div class="form-group">
+            <button type="reset" id="reset" class="btn btn-danger">Reset</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>

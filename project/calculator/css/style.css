@@ -1,0 +1,92 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background-image: linear-gradient(rgba(233,233,233,0.5),rgba(233,233,233,0.5)),url('../media/bg.png');
+	background-size: 100% 100%;
+}
+.centercalci {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+form {
+	width: 400px;
+	height: 520px;
+	box-shadow: 0 0 10px 1px white;
+}
+#app_name {
+	width: inherit;
+	font-size: 0.8rem;
+	padding: 2px 0 2px 10px;
+	background-color: #5e4747;
+	color: #fff;
+	border: none;
+	outline: none;
+}
+#display_answer {
+	width: inherit;
+	height: 100px;
+	background-color: #303030;
+	font-size: 2rem;
+	color: #fff;
+	text-align: right;
+	outline: none;
+	border: none;
+}
+.layer1 {
+	width: inherit;
+	height: 90px;
+	display: flex;
+	justify-content: center;
+}
+.layer2 {
+	width: inherit;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+}
+input {
+	flex: 1;
+	font-size: 1.4rem;
+	color: #fff;
+	border: 1px solid #504f4f;
+	outline: none;
+}
+.main_num {
+	background-color: #101011;
+	color: #fff;
+}
+.operator {
+	background-color: #303030;
+}
+#clearbutton {
+	font-size: 1rem;
+}
+input:hover {
+	background-color: #474747;
+	border: 1px solid grey;
+}
+@media screen and (max-width: 450px) {
+	.container {
+		padding-top: 2rem;
+	}
+	.centercalci {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+	}
+	form {
+			width: 250px;
+			height: 370px;
+	}	
+}
+@media screen and (max-width: 300px) {
+	.container {
+		padding-top: 4rem;
+		overflow-y: hidden;
+	}
+}
